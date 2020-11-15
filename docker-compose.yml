@@ -1,0 +1,36 @@
+version: '3'
+services:
+#    redis:
+#        image: 'redis:3-alpine'
+#        ports:
+#            - '6379:6379'
+            
+#    db:
+#        image: 'postgres:9.5-alpine'
+#        ports:
+#            - '5432:5432'
+#        environment:
+#            - POSTGRES_PASSWORD=t3ster
+#        volumes:
+#            - "aastha_postgres:/var/lib/postgresql/data"
+#            - ./postgres:/docker-entrypoint-initdb.d/
+            
+    activemq:
+        privileged: true
+        user: root
+        image: njmittet/alpine-activemq        
+        ports:
+            - '61616:61616'
+            - '8161:8161'
+            - '1616:1616'
+        environment:
+            - '_JAVA_OPTIONS="-Dactivemq.data=/tmp/data" -Dcom.sun.management.jmxremote.port=1616 -Dcom.sun.management.jmxremote.local.only=false -Dcom.sun.management.jmxremote.authenticate=false -Djava.rmi.server.hostname=127.0.0.1'
+        volumes:
+            - 'aastha_activemq:/tmp/data'
+
+volumes:
+    aastha_postgres:
+        driver: local
+    aastha_activemq:
+        driver: local
+

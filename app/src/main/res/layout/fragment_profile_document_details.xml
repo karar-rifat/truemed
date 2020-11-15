@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/dashboard_background_small">
+
+
+    <RelativeLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView22"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            app:srcCompat="@drawable/back_arrow" />
+
+        <TextView
+            android:id="@+id/textView44"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:text="Document"
+            android:textColor="@color/white"
+            android:textSize="@dimen/titleSize" />
+
+        <ImageView
+            android:id="@+id/ibShare"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="24dp"
+            android:layout_centerVertical="true"
+           android:layout_toStartOf="@id/btnDelete"
+            app:srcCompat="@drawable/share_icon" />
+
+        <ImageView
+            android:id="@+id/btnDelete"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="16dp"
+           android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            app:srcCompat="@drawable/delete_icon" />
+
+
+    </RelativeLayout>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutUserInfo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:background="@drawable/card_rectangular"
+        android:paddingTop="24dp"
+        android:paddingBottom="24dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        >
+
+        <EditText
+            android:id="@+id/editText41"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:ems="10"
+            android:focusable="false"
+            android:hint="Document Title"
+            android:inputType="textPersonName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView24"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText41"
+            app:srcCompat="@drawable/gallery_icon" />
+
+        <com.github.barteksc.pdfviewer.PDFView
+            android:id="@+id/pdfView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/edit_text_line_border"
+            android:visibility="gone"
+            android:padding="4dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="32dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText41" />
+
+        <!--<ImageView-->
+        <!--android:layout_width="50dp"-->
+        <!--android:layout_height="50dp" app:srcCompat="@drawable/camera"-->
+        <!--android:id="@+id/btnDocUploadCamera"-->
+        <!--app:layout_constraintStart_toStartOf="parent" app:layout_constraintHorizontal_bias="0.5"-->
+        <!--app:layout_constraintEnd_toStartOf="@+id/btnDocUploadGallery" app:layout_constraintTop_toBottomOf="@+id/view27"-->
+        <!--app:layout_constraintBottom_toBottomOf="parent"/>-->
+<!--        <Button-->
+<!--            android:id="@+id/button18"-->
+<!--            android:layout_width="150dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_marginTop="16dp"-->
+<!--            android:layout_marginBottom="8dp"-->
+<!--            android:background="@drawable/button_close"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent" />-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

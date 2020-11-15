@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/pill"
+        android:title="Add Pill" />
+
+    <item
+        android:id="@+id/appointment"
+        android:title="Add Appointment" />
+    <item
+        android:id="@+id/vaccine"
+        android:title="Add Vaccine" />
+
+</menu>

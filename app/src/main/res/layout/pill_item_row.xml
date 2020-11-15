@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/card_rectangular"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginBottom="8dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ImageView
+        android:id="@+id/iconPill"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:padding="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/pill_selected"/>
+
+    <TextView
+        android:id="@+id/tvPillName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Pill Name"
+        android:textSize="16sp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@id/tvReminder"
+        app:layout_constraintStart_toEndOf="@id/iconPill"
+        app:layout_constraintBottom_toTopOf="@id/clDetails"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvReminder"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Active"
+        android:textSize="14sp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/clDetails"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clDetails"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/tvPillName"
+        app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="@id/tvPillName">
+
+        <TextView
+            android:id="@+id/tvBeforeOrAfter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Before Meal"
+            android:textAlignment="viewStart"
+            android:textSize="14sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+           />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.30"/>
+
+        <View
+            android:id="@+id/separator1"
+            android:layout_width="1dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintTop_toTopOf="@id/tvBeforeOrAfter"
+            app:layout_constraintBottom_toBottomOf="@id/tvBeforeOrAfter"
+            android:background="@color/gray_600"
+            app:layout_constraintStart_toEndOf="@id/tvBeforeOrAfter"/>
+
+        <TextView
+            android:id="@+id/tvDose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10 pill(s)"
+            android:textSize="14sp"
+            android:layout_marginStart="8dp"
+            android:textAlignment="center"
+            app:layout_constraintStart_toEndOf="@id/separator1"
+            app:layout_constraintBottom_toBottomOf="parent"
+           app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.56"/>
+
+        <View
+            android:id="@+id/separator2"
+            android:layout_width="1dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintTop_toTopOf="@id/tvBeforeOrAfter"
+            app:layout_constraintBottom_toBottomOf="@id/tvBeforeOrAfter"
+            android:background="@color/gray_600"
+            app:layout_constraintStart_toEndOf="@id/tvDose"/>
+
+        <TextView
+            android:id="@+id/tvTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12:50 PM"
+            android:textSize="14sp"
+            android:layout_marginStart="8dp"
+            android:textAlignment="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/separator2"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.84"/>
+
+        <View
+            android:id="@+id/separator3"
+            android:layout_width="1dp"
+            android:layout_height="16dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintTop_toTopOf="@id/tvBeforeOrAfter"
+            app:layout_constraintBottom_toBottomOf="@id/tvBeforeOrAfter"
+            android:background="@color/gray_600"
+            app:layout_constraintStart_toEndOf="@id/tvTime"/>
+
+        <TextView
+            android:id="@+id/tvStock"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="@drawable/round_background"
+            android:text="10"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/separator3"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/clTime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center_vertical"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/clDetails"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@id/tvPillName">
+
+        <TextView
+            android:id="@+id/tvMorning"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Morning"
+            android:textAlignment="viewStart"
+            android:textSize="12sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/separator4"
+            app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.25"/>
+
+        <View
+            android:id="@+id/separator4"
+            android:layout_width="1dp"
+            android:layout_height="16dp"
+            app:layout_constraintTop_toTopOf="@id/tvMorning"
+            app:layout_constraintBottom_toBottomOf="@id/tvMorning"
+            android:background="@color/gray_600"
+            app:layout_constraintStart_toEndOf="@id/guideline9"/>
+
+        <TextView
+            android:id="@+id/tvNoon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Noon"
+            android:textSize="12sp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:textAlignment="center"
+            app:layout_constraintStart_toEndOf="@id/separator4"
+            app:layout_constraintEnd_toStartOf="@id/separator5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5"/>
+
+        <View
+            android:id="@+id/separator5"
+            android:layout_width="1dp"
+            android:layout_height="16dp"
+            app:layout_constraintTop_toTopOf="@id/tvMorning"
+            app:layout_constraintBottom_toBottomOf="@id/tvMorning"
+            android:background="@color/gray_600"
+            app:layout_constraintStart_toEndOf="@id/guideline10"/>
+
+        <TextView
+            android:id="@+id/tvEvening"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Evening"
+            android:textSize="12sp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:textAlignment="center"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/separator5"
+            app:layout_constraintEnd_toStartOf="@id/separator6"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.75"/>
+
+        <View
+            android:id="@+id/separator6"
+            android:layout_width="1dp"
+            android:layout_height="16dp"
+            app:layout_constraintTop_toTopOf="@id/tvMorning"
+            app:layout_constraintBottom_toBottomOf="@id/tvMorning"
+            android:background="@color/gray_600"
+            app:layout_constraintStart_toEndOf="@id/guideline11"/>
+
+        <TextView
+            android:id="@+id/tvNight"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Night"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintStart_toEndOf="@id/separator6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

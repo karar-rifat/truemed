@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="16dp"
+    android:layout_marginEnd="16dp"
+    android:layout_marginBottom="4dp"
+    android:padding="16dp"
+    android:background="@drawable/row_background">
+
+    <TextView
+        android:id="@+id/txt_list_dash_med_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Medicine Title"
+        android:textColor="@color/gray_700"
+        android:textSize="20sp"
+        android:ellipsize="marquee"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toStartOf="@id/tvMedListTime"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvMedListTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time"
+        android:textColor="@color/gray_700"
+        android:textSize="20sp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

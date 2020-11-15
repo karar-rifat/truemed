@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:tools="http://schemas.android.com/tools" xmlns:android="http://schemas.android.com/apk/res/android">
+    <TextView
+            android:text="Name"
+            android:id="@+id/pillName"
+            android:layout_column="1"
+            android:background="@drawable/cell_shape_pink"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="@color/white"
+            android:padding="10dp"/>
+    <TextView
+            android:text="Time"
+            android:id="@+id/pillTime"
+            android:layout_column="2"
+            android:background="@drawable/cell_shape_green"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="@color/white"
+            android:padding="10dp"/>
+    <TextView
+            android:text="Daily/Periodically"
+            android:id="@+id/dailyOrPeriod"
+            android:layout_column="3"
+            android:background="@drawable/cell_shape_orange"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="@color/white"
+            android:padding="10dp"/>
+    <TextView
+            android:text="Before/After Meal"
+            android:id="@+id/beforeOrAfterMeal"
+            android:layout_column="4"
+            android:background="@drawable/cell_shape_violet"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="@color/white"
+            android:padding="10dp"/>
+    <TextView
+            android:text="No of Day"
+            android:id="@+id/noOfDay"
+            android:layout_column="5"
+            android:background="@drawable/cell_shape_blue"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="@color/white"
+            android:padding="10dp"/>
+    <TextView
+            android:text="No of Dose"
+            android:id="@+id/noOfDose"
+            android:layout_column="6"
+            android:background="@drawable/cell_shape_black"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="@color/white"
+            android:padding="10dp"/>
+    <TextView
+            android:text="Stock"
+            android:id="@+id/pillStock"
+            android:layout_column="7"
+        android:background="@drawable/cell_shape_pink"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:textColor="@color/white"
+            android:padding="10dp"/>
+<!--    <TextView-->
+<!--            android:text="Remain"-->
+<!--            android:id="@+id/pillRemain"-->
+<!--            android:layout_column="8"-->
+<!--             android:background="@drawable/cell_shape_violet"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:padding="10dp"/>-->
+    <!--<TextView-->
+            <!--android:text="Refill"-->
+            <!--andro id:id="@+id/pillRefill"-->
+            <!--android:layout_column="9"-->
+            <!--android:background="@drawable/cell_shape_orange"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:textColor="@color/white"-->
+            <!--android:padding="10dp"/>-->
+
+    <TextView
+        android:text="Last Pill"
+        android:id="@+id/lastPillStatus"
+        android:layout_column="9"
+        android:background="@drawable/cell_shape_orange"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textColor="@color/white"
+        android:padding="10dp"/>
+<!--    <TextView-->
+<!--            android:text="Course Status"-->
+<!--            android:id="@+id/pillStatus"-->
+<!--            android:layout_column="9"-->
+<!--            android:background="@drawable/cell_shape_green"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:padding="10dp"/>-->
+
+</TableRow>

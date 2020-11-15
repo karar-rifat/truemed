@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "835479418396",
+    "firebase_url": "https://truemed-6d460.firebaseio.com",
+    "project_id": "truemed-6d460",
+    "storage_bucket": "truemed-6d460.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:835479418396:android:508862fd9dadb1094151d9",
+        "android_client_info": {
+          "package_name": "com.example.pillreminder"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "835479418396-bdorrtbjq5vk9src098aofoovcq9se7r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.pillreminder",
+            "certificate_hash": "d33e0f44de7c9ac2f02aa51593e2d835a86da6be"
+          }
+        },
+        {
+          "client_id": "835479418396-rf3tpffi28sufik8k4rctl8oo5tjsids.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1RCa5yhsCJqy_7OlhKCvwZjN9r6HGcok"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "835479418396-rf3tpffi28sufik8k4rctl8oo5tjsids.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

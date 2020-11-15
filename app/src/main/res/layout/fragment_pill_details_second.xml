@@ -1,0 +1,352 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/blue_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView330"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            app:srcCompat="@drawable/back_arrow" />
+
+        <TextView
+            android:id="@+id/textView62"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:text="Update Medication"
+            android:textColor="@color/white"
+            android:textSize="@dimen/titleSize" />
+
+        <ImageView
+            android:id="@+id/btnDuplicate"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="4dp"
+            android:scaleType="centerCrop"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@id/imageButton15"
+            app:srcCompat="@android:drawable/ic_input_get" />
+
+
+        <ImageView
+            android:id="@+id/imageButton15"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginEnd="8dp"
+            android:layout_centerVertical="true"
+            android:scaleType="centerCrop"
+            android:layout_alignParentEnd="true"
+            app:srcCompat="@android:drawable/ic_menu_delete" />
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/appBar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/setTimeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Set Time"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layoutUserInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/card_rectangular"
+                android:paddingStart="16dp"
+                android:paddingTop="24dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="32dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/setTimeText">
+
+                <EditText
+                    android:id="@+id/etMorningDetails"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="16dp"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:hint="@string/morningTextWithLimit"
+                    android:inputType="textPersonName"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView68"
+                    app:layout_constraintEnd_toStartOf="@id/switch12"
+                    app:layout_constraintStart_toEndOf="@+id/textView68"
+                    app:layout_constraintTop_toTopOf="@+id/textView68" />
+
+                <Switch
+                    android:id="@+id/switch12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="21dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView68"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView68" />
+
+                <TextView
+                    android:id="@+id/textView68"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Morning"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView69"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="24dp"
+                    android:text="Noon"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView68" />
+
+                <Switch
+                    android:id="@+id/switch13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView69"
+                    app:layout_constraintStart_toStartOf="@+id/switch12"
+                    app:layout_constraintTop_toTopOf="@+id/textView69" />
+
+                <EditText
+                    android:id="@+id/etNoonDetails"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="16dp"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:hint="@string/noonTextWithLimit"
+                    android:inputType="textPersonName"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView69"
+                    app:layout_constraintEnd_toStartOf="@id/switch13"
+                    app:layout_constraintStart_toEndOf="@+id/textView68"
+                    app:layout_constraintTop_toTopOf="@+id/textView69" />
+
+                <EditText
+                    android:id="@+id/etEveningDetails"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="16dp"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:hint="@string/eveningTextWithLimit"
+                    android:inputType="textPersonName"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView70"
+                    app:layout_constraintEnd_toStartOf="@id/switch14"
+                    app:layout_constraintStart_toEndOf="@+id/textView68"
+                    app:layout_constraintTop_toTopOf="@+id/textView70" />
+
+                <EditText
+                    android:id="@+id/etNightDetails"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="32dp"
+                    android:layout_marginEnd="16dp"
+                    android:ems="10"
+                    android:focusable="false"
+                    android:hint="@string/nightTextWithLimit"
+                    android:inputType="textPersonName"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView71"
+                    app:layout_constraintEnd_toStartOf="@id/switch15"
+                    app:layout_constraintStart_toEndOf="@+id/textView68"
+                    app:layout_constraintTop_toTopOf="@+id/textView71" />
+
+                <TextView
+                    android:id="@+id/textView70"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="24dp"
+                    android:text="Evening"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView69" />
+
+                <Switch
+                    android:id="@+id/switch14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView70"
+                    app:layout_constraintStart_toStartOf="@+id/switch12"
+                    app:layout_constraintTop_toTopOf="@+id/textView70" />
+
+                <TextView
+                    android:id="@+id/textView71"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="24dp"
+                    android:text="Night"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView70" />
+
+                <Switch
+                    android:id="@+id/switch15"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView71"
+                    app:layout_constraintStart_toStartOf="@+id/switch12"
+                    app:layout_constraintTop_toTopOf="@+id/textView71" />
+
+                <TextView
+                    android:id="@+id/textView87"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Frequency"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView90" />
+
+                <TextView
+                    android:id="@+id/tvPeriodically"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Periodically"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView87" />
+
+                <TextView
+                    android:id="@+id/textView89"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="24dp"
+                    android:text="Before Meal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView71" />
+
+                <TextView
+                    android:id="@+id/textView90"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:text="After Meal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView89" />
+
+                <Switch
+                    android:id="@+id/switch16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView89"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView89" />
+
+                <Switch
+                    android:id="@+id/switch17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView90"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView90" />
+
+                <Spinner
+                    android:id="@+id/spFrequencyUpdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textView87"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textView87" />
+
+                <Spinner
+                    android:id="@+id/spPeriodicallyUpdate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvPeriodically"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/tvPeriodically" />
+
+                <TextView
+                    android:id="@+id/txtEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="End At"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvEndAtDetails"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/tvEndAtDetails"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="End Date"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/spPeriodicallyUpdate" />
+
+
+                <Button
+                    android:id="@+id/btnSave"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="32dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="32dp"
+                    android:background="@color/blue_header"
+                    android:text="Save"
+                    android:textColor="@color/white"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tvEndAtDetails" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

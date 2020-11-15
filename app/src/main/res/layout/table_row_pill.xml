@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableRow xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <TextView
+        android:id="@+id/pillName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="1"
+        android:background="@drawable/cell_shape"
+        android:padding="10dp"
+        android:text="Name"
+        android:textColor="@color/tableText" />
+
+    <TextView
+        android:id="@+id/pillTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="2"
+        android:background="@drawable/cell_shape"
+        android:padding="10dp"
+        android:text="Time"
+        android:textColor="@color/tableText" />
+
+    <TextView
+        android:id="@+id/dailyOrPeriod"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="3"
+        android:background="@drawable/cell_shape"
+        android:padding="10dp"
+        android:text="N/A"
+        android:textColor="@color/tableText" />
+
+    <TextView
+        android:id="@+id/beforeOrAfterMeal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="4"
+        android:background="@drawable/cell_shape"
+        android:padding="10dp"
+        android:text="N/A"
+        android:textColor="@color/tableText" />
+
+    <TextView
+        android:id="@+id/noOfDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="5"
+        android:background="@drawable/cell_shape"
+        android:padding="10dp"
+        android:text="No of Day"
+        android:textColor="@color/tableText" />
+
+    <TextView
+        android:id="@+id/noOfDose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="6"
+        android:background="@drawable/cell_shape"
+        android:padding="10dp"
+        android:text="No of Dose"
+        android:textColor="@color/tableText" />
+
+    <TextView
+        android:id="@+id/pillStock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="7"
+        android:background="@drawable/cell_shape"
+        android:padding="10dp"
+        android:text="Stock"
+        android:textColor="@color/tableText" />
+    <!--    <TextView-->
+    <!--            android:text="Remain"-->
+    <!--            android:id="@+id/pillRemain"-->
+    <!--            android:layout_column="8"-->
+    <!--            android:textColor="@color/tableText"-->
+    <!--            android:background="@drawable/cell_shape"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:padding="10dp"/>-->
+    <!--<TextView-->
+    <!--android:text="Refill"-->
+    <!--android:id="@+id/pillRefill"-->
+    <!--android:layout_column="9"-->
+    <!--android:textColor="@color/tableText"-->
+    <!--android:background="@drawable/cell_shape"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:padding="10dp"/>-->
+    <TextView
+        android:id="@+id/lastPillStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_column="9"
+        android:background="@drawable/cell_shape"
+        android:padding="10dp"
+        android:text="Last Pill"
+        android:textColor="@color/tableText" />
+    <!--    <TextView-->
+    <!--            android:text="Status"-->
+    <!--            android:id="@+id/pillStatus"-->
+    <!--            android:layout_column="9"-->
+    <!--            android:textColor="@color/tableText"-->
+    <!--            android:background="@drawable/cell_shape"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:padding="10dp"/>-->
+
+
+</TableRow>

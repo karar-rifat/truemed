@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.pillreminder">
+    <dist:module dist:instant="true" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+
+
+    <application
+        android:usesCleartextTraffic="true"
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:requestLegacyExternalStorage="true"
+        android:enabled="true"
+        android:icon="@mipmap/icon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/icon_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <meta-data android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_app_id"/>
+
+        <activity android:name="com.facebook.FacebookActivity"
+            android:configChanges=
+                "keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:label="@string/app_name" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="@string/fb_login_protocol_scheme" />
+            </intent-filter>
+        </activity>
+        <meta-data android:name="com.facebook.accountkit.ApplicationName"
+            android:value="@string/app_name"/>
+        <meta-data
+            android:name="com.facebook.accountkit.ClientToken"
+            android:value="@string/ACCOUNT_KIT_CLIENT_TOKEN" />
+
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" /> <!-- optional (needed if default theme has no action bar) -->
+
+        <activity android:name=".MainActivity"
+            android:theme="@style/AppTheme.FullScreen"
+            >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".activities.ViewPostsActivity" />
+        <activity
+            android:name=".activities.DashboardActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activities.ProfileActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activities.TutorialActivity"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".activities.AppointmentActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".activities.VaccineActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <!--<activity android:name=".activities.PillActivity"-->
+        <!--android:windowSoftInputMode="adjustPan"/>-->
+        <activity
+            android:name=".activities.IsolatedActivity"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:taskAffinity="" />
+        <activity
+            android:name=".activities.AlarmActivity"
+            android:excludeFromRecents="true"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:taskAffinity="" />
+        <activity
+            android:name=".activities.PassCodeActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <receiver
+            android:name=".receivers.AlarmReceiver"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".receivers.NetworkStateChecker"
+            android:enabled="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".notifications.NotificationActionReceiver"
+            android:enabled="true">
+        </receiver>
+        <service
+            android:name=".notifications.AlarmNotificationHelper"
+            android:enabled="true" />
+        <service
+            android:name=".service.DataPushService"
+            android:enabled="true"/>
+        <service
+            android:name=".service.DataFetchService"
+            android:enabled="true"/>
+        <service
+            android:name=".service.DataDeleteService"
+            android:enabled="true"/>
+        <service
+            android:name=".service.ForegroundService"
+            android:enabled="true"
+            android:exported="false">
+        </service>
+        <provider
+            android:name=".helper.MyFileProvider"
+            android:authorities="com.example.pillreminder.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+
+    </application>
+
+</manifest>

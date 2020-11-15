@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/dashboard_background_small"
+    android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/appBar"
+                android:layout_width="match_parent"
+                android:layout_height="?android:attr/actionBarSize"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/imageButton5"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="8dp"
+                    app:srcCompat="@drawable/back_arrow" />
+
+                <TextView
+                    android:id="@+id/textView44"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:text="Document"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/titleSize" />
+            </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scrollViewAddDoc"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/appBar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/rootView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/layoutUserCard"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:background="@drawable/user_background"
+                android:paddingTop="24dp"
+                android:paddingBottom="16dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/proPicEdit"
+                    android:layout_width="92dp"
+                    android:layout_height="92dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/profile_background" />
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/proPicEdit"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="8dp"
+                    android:text="Ashfaq Ahmed"
+                    android:textColor="@color/blue_gray_800"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/tvEmail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvName"
+                    android:layout_centerHorizontal="true"
+                    android:text="example@email.com"
+                    android:textColor="@color/blue_gray_800"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="32dp"
+                android:text="Add Document"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/layoutUserCard" />
+
+            <ImageView
+                android:id="@+id/imageView21"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layoutUserCard"
+                app:srcCompat="@drawable/upload_icon" />
+
+            <RelativeLayout
+                android:id="@+id/layoutUserInfo"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="24dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/card_rectangular"
+                android:paddingStart="16dp"
+                android:paddingTop="24dp"
+                android:paddingEnd="16dp"
+                android:paddingBottom="24dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tvInfo">
+
+                <EditText
+                    android:id="@+id/editText40"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:ems="10"
+                    android:hint="Document Title"
+                    android:inputType="textPersonName" />
+
+                <ImageView
+                    android:id="@+id/capturedImage"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginBottom="8dp"
+                    app:srcCompat="@drawable/gallery_icon"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/editText40"/>
+
+                  <ImageView
+                    android:id="@+id/btnDocUploadGallery"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                      android:layout_marginTop="-54dp"
+                      android:layout_marginStart="-54dp"
+                    android:layout_marginBottom="16dp"
+                    android:focusable="true"
+                    app:srcCompat="@drawable/add_user_image"
+                      android:layout_toEndOf="@id/capturedImage"
+                      android:layout_below="@id/capturedImage"/>
+
+                <TextView
+                    android:id="@+id/btnSelectDocument"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Select Document"
+                    android:textSize="16sp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_below="@id/capturedImage" />
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

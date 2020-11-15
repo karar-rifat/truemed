@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+            android:id="@+id/navigation_rating"
+            android:icon="@drawable/com_accountkit_get_call"
+            android:title="Rating" />
+
+    <item
+            android:id="@+id/navigation_reminder"
+            android:icon="@drawable/com_accountkit_get_call"
+            android:title="Reminder" />
+
+    <item
+            android:id="@+id/navigation_dashboard"
+            android:icon="@drawable/com_accountkit_get_call"
+            android:title="Dashboard" />
+
+</menu>
